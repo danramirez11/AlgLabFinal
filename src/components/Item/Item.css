@@ -1,0 +1,19 @@
+section{
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 20px;
+    width: 20vw;
+    padding: 12px;
+    margin: 12px;
+}
+
+section h3, section p{
+    margin: 2px;
+}
+
+section img{
+    width: 100%;
+    border-radius: 10px;
+}

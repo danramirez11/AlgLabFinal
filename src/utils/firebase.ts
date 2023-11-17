@@ -19,7 +19,6 @@ export const addPost = async (post: any) => {
 }
 
 export const getPost = async () => {
-  //const querySnapshot = await getDocs(collection(db, "lab"));
 
   const q = query((collection(db, "lab")), orderBy("createdAt", "desc"));
   const querySnapshot = await getDocs(q);

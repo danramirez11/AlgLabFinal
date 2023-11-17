@@ -1,5 +1,6 @@
 import firebase from "../../utils/firebase";
 import events from "../../utils/events";
+import styles from "./Forms.css"
 
 const forms = {
     name: " ",
@@ -60,13 +61,13 @@ export default class Forms extends HTMLElement {
 
 	render() {
 		if (this.shadowRoot)
-			this.shadowRoot.innerHTML = `<style></style>
+			this.shadowRoot.innerHTML = `<style>${styles}</style>
 		    <section>
 			<input type="text" class="name" placeholder="name">
 			<input type="text" class="quantity" placeholder="quantity">
             <input type="text" class="price" placeholder="price">
             <input type="text" class="img" placeholder="img">
-			<button>Subir</button>
+			<button>Upload</button>
 			</section>
         `;
 

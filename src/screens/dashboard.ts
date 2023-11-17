@@ -3,6 +3,7 @@ import  Item, { Attribute } from "../components/Item/Item";
 import firebase from "../utils/firebase";
 import events from "../utils/events";
 import { serverTimestamp } from "firebase/firestore";
+import styles from "./dashboard.css"
 
 export default class Dashboard extends HTMLElement {
 
@@ -47,13 +48,17 @@ export default class Dashboard extends HTMLElement {
 	}
 
 	render() {
-		if (this.shadowRoot) this.shadowRoot.innerHTML = `<style></style>`;
+		if (this.shadowRoot) this.shadowRoot.innerHTML = `<style>${styles}</style>`;
+
+		const all = this.ownerDocument.createElement('section');
+		all.classList.add('all')
+        this.shadowRoot?.appendChild(all)
 
 		const forms = this.ownerDocument.createElement('my-forms');
-        this.shadowRoot?.appendChild(forms)
+        all.appendChild(forms)
 
 		const section = this.ownerDocument.createElement('section');
-		this.shadowRoot?.appendChild(section);
+		all.appendChild(section);
 
 		this.items.forEach((item) => {
 			section.appendChild(item)

@@ -1,11 +1,11 @@
+import stylesItem from "./Item.css"
+
 export enum Attribute {
     "name" = "name",
     "quantity" = "quantity",
     "price" = "price",
     "img" = "img"
 }
-
-
 
 class Item extends HTMLElement{
     
@@ -52,6 +52,7 @@ class Item extends HTMLElement{
     render(){
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
+            <style>${stylesItem}</style>
             <section>
             <h3>${this.name}</h3>
             <p>$${this.price}</p>

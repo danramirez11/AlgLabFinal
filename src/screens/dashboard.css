@@ -1,0 +1,8 @@
+.all{
+    display: flex;
+}
+
+section section{
+    display: flex;
+    flex-wrap: wrap;
+}

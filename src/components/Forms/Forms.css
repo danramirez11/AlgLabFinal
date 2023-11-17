@@ -1,0 +1,33 @@
+section{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 16px;
+    border-style: solid;
+    border-color: #667FF7;
+    border-width: 2px;
+    margin: 12px;
+    padding: 12px;
+}
+
+input, button {
+    border-radius: 16px;
+    color: #667FF7;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #667FF7;
+    border-width: 2px;
+    padding: 8px;
+    padding-inline: 24px;
+    text-align: left;
+}
+::placeholder{
+    color: #667FF7;
+}
+
+button{
+    background-color: #667FF7;
+    color: white;
+    text-align: center;
+}
